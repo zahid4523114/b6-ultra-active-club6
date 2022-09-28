@@ -45,12 +45,7 @@ const ActivitiesList = () => {
             <p className="fw-bold">22 yrs</p>
           </div>
           <AddBreak></AddBreak>
-          <div>
-            <h3 className="fw-bold">Exercise Details </h3>
-            {favorite.map((item) => (
-              <ExerciseTime eachItem={item}></ExerciseTime>
-            ))}
-          </div>
+          <ExerciseTime Items={favorite}></ExerciseTime>
           <BreakTime></BreakTime>
         </div>
       </div>

@@ -2,13 +2,21 @@ import React from "react";
 import "./ExerciseTime.css";
 
 const ExerciseTime = (props) => {
-  let { time } = props.eachItem;
+  const exerciseItems = props.Items;
+  console.log(exerciseItems);
+
   let defaultTime = 0;
-  let newTime = defaultTime + time;
+  for (const exercise of exerciseItems) {
+    let newTime = exercise.time;
+    defaultTime = defaultTime + newTime;
+  }
   return (
-    <div className="my-4">
-      <div className="p-3 rounded shadow-lg mb-4">
-        <h4>Exercise time :{time}min</h4>
+    <div>
+      <h3 className="fw-bold">Exercise Details</h3>
+      <div className="p-3 rounded shadow-lg my-4">
+        <h4>
+          Exercise time : <span>{defaultTime}</span>min
+        </h4>
       </div>
     </div>
   );

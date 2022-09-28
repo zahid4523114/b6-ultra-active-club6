@@ -3,8 +3,8 @@ import "./ExerciseTime.css";
 
 const ExerciseTime = (props) => {
   let { time } = props.eachItem;
-  let defaultTime = 0;
-  let newTime = defaultTime + time;
+  // let defaultTime = 0;
+  // let newTime = defaultTime + time;
   return (
     <div className="my-4">
       <div className="p-3 rounded shadow-lg mb-4">

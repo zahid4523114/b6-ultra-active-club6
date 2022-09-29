@@ -3,8 +3,8 @@ import "./Questions.css";
 
 const Questions = () => {
   return (
-    <div>
-      <div>
+    <div className="container container-lg container-md ">
+      <div className="bg-body shadow-lg rounded p-4 my-4">
         <h1>How does react work?</h1>
         <p>
           In English ReactJS divides the UI into isolated reusable pieces of
@@ -14,7 +14,7 @@ const Questions = () => {
           without cluttering your code.
         </p>
       </div>
-      <div>
+      <div className="bg-body shadow-lg rounded p-4 mb-4">
         <h1>Difference between Props and State</h1>
         <b>Props:</b>
         <p>1.Props are read-only.</p>
@@ -37,7 +37,7 @@ const Questions = () => {
         </p>
         <p>6.Stateless components cannot have State.</p>
       </div>
-      <div>
+      <div className="bg-body shadow-lg rounded p-4 mb-4">
         <h1>The useEffect Hook Usages</h1>
         <p>1.Side Effect Runs After Every Render</p>
         <p>2.Side Effect Runs Only Once After Initial Render</p>

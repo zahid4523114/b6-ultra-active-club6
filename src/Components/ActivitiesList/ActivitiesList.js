@@ -5,8 +5,7 @@ import "./ActivitiesList.css";
 import AddBreak from "../AddBreak/AddBreak";
 import ExerciseTime from "../ExerciseTime/ExerciseTime";
 import BreakTime from "../BreakTime/BreakTime";
-import fakedb, { addToDb } from "../../utilities/fakedb";
-
+import swal from "sweetalert";
 const ActivitiesList = () => {
   let [activity, setActivity] = useState([]);
   useEffect(() => {
@@ -24,6 +23,13 @@ const ActivitiesList = () => {
   const [breaks, setBreaks] = useState([]);
   const addBreak = (breakTime) => {
     setBreaks(breakTime);
+  };
+  //sweet alert
+  function alert() {
+    swal("Great job!", "You complete the activity!", "success");
+  }
+  const sweetAlert = () => {
+    alert();
   };
 
   return (
@@ -55,6 +61,12 @@ const ActivitiesList = () => {
           <AddBreak addBreak={addBreak}></AddBreak>
           <ExerciseTime Items={favorite}></ExerciseTime>
           <BreakTime breakTime={breaks}></BreakTime>
+          <button
+            onClick={sweetAlert}
+            className="btn btn-primary container-fluid mt-5"
+          >
+            Activity completed
+          </button>
         </div>
       </div>
     </div>

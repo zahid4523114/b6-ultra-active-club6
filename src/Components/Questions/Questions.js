@@ -3,7 +3,7 @@ import "./Questions.css";
 
 const Questions = () => {
   return (
-    <div className="container container-lg container-md ">
+    <div className="flex-column flex-md-column container-fluid flex-lg-column ">
       <div className="bg-body shadow-lg rounded p-4 my-4">
         <h1>How does react work?</h1>
         <p>

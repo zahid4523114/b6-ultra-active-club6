@@ -12,10 +12,10 @@ const ExerciseTime = (props) => {
   }
   return (
     <div>
-      <h3 className="fw-bold">Playing Details</h3>
+      <h3 className="fw-bold">Working Details</h3>
       <div className="p-3 rounded shadow-lg my-4">
         <h4>
-          Playing time : <b>{defaultTime}</b>min
+          Working time : <b>{defaultTime}</b>min
         </h4>
       </div>
     </div>

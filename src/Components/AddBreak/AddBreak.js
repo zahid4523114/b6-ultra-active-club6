@@ -11,7 +11,7 @@ const AddBreak = (props) => {
   };
   return (
     <div className="my-5">
-      <h3 className="fw-bold">Playing break:</h3>
+      <h3 className="fw-bold">Break time:</h3>
       <div className="d-flex justify-content-between shadow-lg p-3 rounded">
         <button
           onClick={() => addBreak(breaks.fb)}

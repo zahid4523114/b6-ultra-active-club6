@@ -6,7 +6,7 @@ const BreakTime = (props) => {
     <div className="">
       <div className="p-3 rounded shadow-lg">
         <h4>
-          Playing Break : <b>{props.breakTime}</b>
+          Break : <b>{props.breakTime}</b>
         </h4>
       </div>
     </div>

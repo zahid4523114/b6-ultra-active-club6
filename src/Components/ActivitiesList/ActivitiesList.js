@@ -40,33 +40,35 @@ const ActivitiesList = () => {
         </h1>
       </div>
       <div className="row container-fluid  flex-lg-row flex-md-column-reverse flex-column-reverse">
-        <div className="activities-container col-9 row">
+        <div className="activities-container row col-lg-9">
           {activity.map((act) => (
             <Activity addGame={addGame} key={act.id} activity={act}></Activity>
           ))}
         </div>
-        <div className="sidebar-container bg-body shadow-lg p-3 rounded col-3 ms-md-3 mb-md-3">
+        <div className="sidebar-container container-fluid  bg-body shadow-lg p-3 rounded  col-md-12 col-lg-3  col-12 ms-md-3 mb-md-3">
           <div className="bg-body">
             <img className="w-25 mb-2" src={logo} alt="" />
             <h5 className="fw-bold">Dewan Mohammod Zahid</h5>
             <p>
               <i class="fa-solid fa-location-dot"></i> Dhaka,Bangladesh
             </p>
+            <div className="d-flex  justify-content-evenly align-items-center p-2 bg-body rounded shadow-lg">
+              <p className="fw-bold">60kg</p>
+              <p className="fw-bold">5.10 inch</p>
+              <p className="fw-bold">22 yrs</p>
+            </div>
           </div>
-          <div className="d-flex justify-content-evenly align-items-center p-2 bg-body rounded shadow-lg">
-            <p className="fw-bold">60kg</p>
-            <p className="fw-bold">5.10 inch</p>
-            <p className="fw-bold">22 yrs</p>
+          <div className="">
+            <AddBreak addBreak={addBreak}></AddBreak>
+            <ExerciseTime Items={favorite}></ExerciseTime>
+            <BreakTime breakTime={breaks}></BreakTime>
+            <button
+              onClick={sweetAlert}
+              className="btn btn-primary container-fluid mt-5"
+            >
+              Activity completed
+            </button>
           </div>
-          <AddBreak addBreak={addBreak}></AddBreak>
-          <ExerciseTime Items={favorite}></ExerciseTime>
-          <BreakTime breakTime={breaks}></BreakTime>
-          <button
-            onClick={sweetAlert}
-            className="btn btn-primary container-fluid mt-5"
-          >
-            Activity completed
-          </button>
         </div>
       </div>
     </div>

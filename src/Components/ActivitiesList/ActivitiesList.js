@@ -5,6 +5,7 @@ import "./ActivitiesList.css";
 import AddBreak from "../AddBreak/AddBreak";
 import ExerciseTime from "../ExerciseTime/ExerciseTime";
 import BreakTime from "../BreakTime/BreakTime";
+import fakedb, { addToDb } from "../../utilities/fakedb";
 
 const ActivitiesList = () => {
   let [activity, setActivity] = useState([]);
@@ -24,6 +25,7 @@ const ActivitiesList = () => {
   const addBreak = (breakTime) => {
     setBreaks(breakTime);
   };
+
   return (
     <div className="">
       <div className="my-3 ms-4">

@@ -2,14 +2,12 @@ import React from "react";
 import "./AddBreak.css";
 
 const AddBreak = (props) => {
-  // console.log(props);
   const { addBreak } = props;
-  console.log(addBreak);
   const breaks = {
-    fb: 10,
-    sb: 20,
-    tb: 30,
-    frb: 40,
+    fb: "10min",
+    sb: "20min",
+    tb: "30min",
+    frb: "40min",
   };
   return (
     <div className="my-5">
@@ -21,9 +19,24 @@ const AddBreak = (props) => {
         >
           10m
         </button>
-        <button className="btn btn-primary rounded-pill">20m</button>
-        <button className="btn btn-primary rounded-pill">30m</button>
-        <button className="btn btn-primary rounded-pill">40m</button>
+        <button
+          onClick={() => addBreak(breaks.sb)}
+          className="btn btn-primary rounded-pill"
+        >
+          20m
+        </button>
+        <button
+          onClick={() => addBreak(breaks.tb)}
+          className="btn btn-primary rounded-pill"
+        >
+          30m
+        </button>
+        <button
+          onClick={() => addBreak(breaks.frb)}
+          className="btn btn-primary rounded-pill"
+        >
+          40m
+        </button>
       </div>
     </div>
   );

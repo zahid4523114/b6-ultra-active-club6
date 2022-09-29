@@ -52,7 +52,7 @@ const ActivitiesList = () => {
             <p>
               <i class="fa-solid fa-location-dot"></i> Dhaka,Bangladesh
             </p>
-            <div className="d-flex  justify-content-evenly align-items-center p-2 bg-body rounded shadow-lg">
+            <div className="d-flex  justify-content-around align-items-center p-2 bg-body rounded shadow-lg">
               <p className="fw-bold">60kg</p>
               <p className="fw-bold">5.10 inch</p>
               <p className="fw-bold">22 yrs</p>

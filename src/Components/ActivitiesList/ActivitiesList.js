@@ -39,7 +39,7 @@ const ActivitiesList = () => {
           <i class="fa-solid fa-chart-line text-primary"></i> Summer activities
         </h1>
       </div>
-      <div className="row container-fluid  flex-lg-row flex-md-column-reverse flex-column-reverse">
+      <div className="row container-fluid flex-lg-row flex-md-column-reverse flex-column-reverse">
         <div className="activities-container row col-lg-9">
           {activity.map((act) => (
             <Activity addGame={addGame} key={act.id} activity={act}></Activity>

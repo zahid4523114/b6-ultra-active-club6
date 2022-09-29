@@ -13,10 +13,16 @@ const ActivitiesList = () => {
       .then((res) => res.json())
       .then((data) => setActivity(data));
   }, []);
+  //exercise time
   const [favorite, setFavorite] = useState([]);
   const addGame = (game) => {
     const newGame = [...favorite, game];
     setFavorite(newGame);
+  };
+  //break time
+  const [breaks, setBreaks] = useState([]);
+  const addBreak = (breakTime) => {
+    setBreaks(breakTime);
   };
   return (
     <div className="">
@@ -44,9 +50,9 @@ const ActivitiesList = () => {
             <p className="fw-bold">5.10 inch</p>
             <p className="fw-bold">22 yrs</p>
           </div>
-          <AddBreak></AddBreak>
+          <AddBreak addBreak={addBreak}></AddBreak>
           <ExerciseTime Items={favorite}></ExerciseTime>
-          <BreakTime></BreakTime>
+          <BreakTime breakTime={breaks}></BreakTime>
         </div>
       </div>
     </div>

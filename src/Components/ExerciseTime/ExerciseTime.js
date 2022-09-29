@@ -3,7 +3,7 @@ import "./ExerciseTime.css";
 
 const ExerciseTime = (props) => {
   const exerciseItems = props.Items;
-  console.log(exerciseItems);
+  // console.log(exerciseItems);
 
   let defaultTime = 0;
   for (const exercise of exerciseItems) {
@@ -12,10 +12,10 @@ const ExerciseTime = (props) => {
   }
   return (
     <div>
-      <h3 className="fw-bold">Exercise Details</h3>
+      <h3 className="fw-bold">Playing Details</h3>
       <div className="p-3 rounded shadow-lg my-4">
         <h4>
-          Exercise time : <span>{defaultTime}</span>min
+          Playing time : <b>{defaultTime}</b>min
         </h4>
       </div>
     </div>

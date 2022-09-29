@@ -1,12 +1,13 @@
 import React from "react";
 import "./BreakTime.css";
 
-const BreakTime = () => {
+const BreakTime = (props) => {
+  console.log(props);
   return (
     <div className="">
       <div className="p-3 rounded shadow-lg">
         <h4>
-          Break time : <span>10min</span>
+          Playing Break : <b>{props.breakTime}</b>min
         </h4>
       </div>
     </div>
